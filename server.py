@@ -1,14 +1,13 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
-from waitress import serve
 import yt_dlp
 
 app = Flask(__name__)
-CORS(app)
+CORS(app)  # Mengizinkan permintaan dari domain lain (CORS)
 
 @app.route('/')
 def index():
-    return "Server is running!"
+    return render_template('index.html')
 
 @app.route('/formats')
 def get_formats():
@@ -33,6 +32,3 @@ def get_formats():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-if __name__ == "__main__":
-    print("🚀 Server starting...")  # Tambahkan debug message
-    serve(app, host="0.0.0.0", port=5000)  
