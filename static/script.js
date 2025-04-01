@@ -2,7 +2,7 @@
 const catIMg1= document.getElementById('cat1');
 const catIMg2 = document.getElementById('cat2');
 const loading= document.getElementById('loading');
-const body=document.getElementById('bg');
+const bg=document.getElementById('bg');
 const petunjuk= document.getElementById('petunjuk');
 
 async function getFormats() {
@@ -115,7 +115,7 @@ function createFallingImage() {
     imgElement.style.animation = `fallAnimation ${randomSpeedFall}s linear infinite, rotateAnimation ${randomSpeedRotate}s linear infinite`;
 
     // Menambahkan gambar ke body
-    document.body.appendChild(imgElement);
+    document.bg.appendChild(imgElement);
 
     // Menghapus gambar setelah animasi selesai (ketika keluar layar)
     setTimeout(() => {
