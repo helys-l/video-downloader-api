@@ -18,7 +18,7 @@ async function getFormats() {
         return alert("Masukkan URL terlebih dahulu!");
     } 
 
-    let response = await fetch(`https://web-production-c2680.up.railway.app/formats?url=${encodeURIComponent(url)}`);
+    let response = await fetch(`https://meowtube-video-downloader.up.railway.app/formats?url=${encodeURIComponent(url)}`);
     ;
     let data = await response.json();
 
