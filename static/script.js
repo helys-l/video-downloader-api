@@ -4,7 +4,6 @@ const catIMg2 = document.getElementById('cat2');
 const loading= document.getElementById('loading');
 const body=document.getElementById('body');
 const petunjuk= document.getElementById('petunjuk');
-const bg=document.getElementById('bg');
 
 async function getFormats() {
     catIMg1.src="/static/oiia-cat.gif";
@@ -116,7 +115,8 @@ function createFallingImage() {
     imgElement.style.animation = `fallAnimation ${randomSpeedFall}s linear infinite, rotateAnimation ${randomSpeedRotate}s linear infinite`;
 
     // Menambahkan gambar ke body
-    document.body.appendChild(imgElement);
+    const bg=document.getElementById('bg');    
+    document.bg.appendChild(imgElement);
 
     // Menghapus gambar setelah animasi selesai (ketika keluar layar)
     setTimeout(() => {
