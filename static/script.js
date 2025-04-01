@@ -2,7 +2,7 @@
 const catIMg1= document.getElementById('cat1');
 const catIMg2 = document.getElementById('cat2');
 const loading= document.getElementById('loading');
-const body=document.getElementById('body');
+const body=document.getElementById('bg');
 const petunjuk= document.getElementById('petunjuk');
 
 async function getFormats() {
