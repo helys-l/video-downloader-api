@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeowTube Video Downloader - Download Video YouTube Gratis</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="MeowTube Video Downloader adalah situs download video YouTube gratis dan cepat. Download video berkualitas tinggi tanpa ribet.">
+    <meta name="keywords" content="MeowTube, Video Downloader, MeowTube Video Downloader, Download Video YouTube, YouTube Downloader, Download Video Gratis, Tiktok Downloader">
+    <meta name="author" content="MeowTube Team">
+
+    <!-- Open Graph (Optional, untuk tampilan share di media sosial) -->
+    <meta property="og:title" content="MeowTube Video Downloader">
+    <meta property="og:description" content="Download video YouTube, instagram, tiktok dll gratis dan mudah hanya di MeowTube.">
+    <meta property="og:image" content="{{ url_for('static', filename='meowtube.png') }}">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='meowtube.png') }}">
+</head>
+<body id="body">
+    <nav>
+        <div class="divNavKontak">
+            <div class="kontak">
+                 <img class="logo" src="{{ url_for('static', filename='meowtube.png') }}" alt="MeowTube Logo">
+            </div>
+            <div class="kontak">
+                <h3 id="petunjuk">Petunjuk Download</h3>
+            </div>
+        </div>
+        <div class="divNav">
+            <h3>MEOWTUBE</h3>
+        </div>
+        <div class="divNavKontak">
+            <div class="kontak">
+                <a href="https://wa.me/08508952132" target="_blank"><img src="static/wa.jpg" alt=""></a>
+            </div>
+            <div class="kontak">
+                <a href="https://adamndelion" target="_blank"><img src="static/x.png" alt=""></a>
+            </div>
+            <div class="kontak">
+                <a href="https://instagram.com/helyy.rz" target="_blank"><img src="static/ig.png" alt=""></a>
+            </div>
+        </div>   
+    </nav>
+    <div class="container">
+        <div class="meme">
+            <div><img id="cat1" src="static/smileCat.png" alt=""></div>
+            <div><img id="cat2" src="static/smileCat.png" alt=""></div>
+        </div>
+        <h3 class="textJudul">Meowtube</h3>
+        <h1 class="textJudul">Video Downloader</h1>
+        <input class="textUrl" type="text" id="videoUrl" placeholder="Masukkan link YouTube" onkeypress="handleKeyPress(event)">
+        <button class="btn" onclick="getFormats()">Cari Video</button>
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p class="loadingText">Loading...</p>
+          </div>
+        <div id="videoDetails" style="display: none;">
+            <img id="thumbnail" src="" alt="Thumbnail">
+            <h2 class="textJudul" id="title"></h2>
+            <select class="btn" id="formatSelect"></select>
+            <button class="btn" onclick="downloadVideo()">Download</button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}">
+         
+    </script>
+</body>
+</html>
