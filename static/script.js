@@ -116,7 +116,7 @@ function createFallingImage() {
 
     // Menambahkan gambar ke body
     const bg=document.getElementById('bg');    
-    document.bg.appendChild(imgElement);
+    bg.appendChild(imgElement);
 
     // Menghapus gambar setelah animasi selesai (ketika keluar layar)
     setTimeout(() => {
