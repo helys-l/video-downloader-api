@@ -116,8 +116,7 @@ function createFallingImage() {
     imgElement.style.animation = `fallAnimation ${randomSpeedFall}s linear infinite, rotateAnimation ${randomSpeedRotate}s linear infinite`;
 
     // Menambahkan gambar ke body
-    console.log("bg");
-    document.bg.appendChild(imgElement);
+    document.body.appendChild(imgElement);
 
     // Menghapus gambar setelah animasi selesai (ketika keluar layar)
     setTimeout(() => {
