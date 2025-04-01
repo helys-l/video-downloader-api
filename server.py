@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 import yt_dlp
+from waitress import serve 
 
 app = Flask(__name__)
 CORS(app)  # Mengizinkan permintaan dari domain lain (CORS)
